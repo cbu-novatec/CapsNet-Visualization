@@ -105,9 +105,11 @@ def ReLU_function(signal):
 ################################################################################
 # Load Input Image
 ################################################################################
-img = Image.open(os.path.join(PATH_TO_TEST_IMAGES_DIR, PATH_TO_TEST_IMAGE))
+# img = Image.open(os.path.join(PATH_TO_TEST_IMAGES_DIR, PATH_TO_TEST_IMAGE))
+img = plt.imread(os.path.join(PATH_TO_TEST_IMAGES_DIR, PATH_TO_TEST_IMAGE))
 # Save original image to the visualization folder
 image.imsave(os.path.join(PATH_TO_INPUT_IMAGE, '{}.png'.format(0)), img)
+img = Image.open(os.path.join(PATH_TO_TEST_IMAGES_DIR, PATH_TO_TEST_IMAGE))
 input_image = np.array(img.getdata(), dtype=np.uint8)
 input_image = np.resize(input_image, (img.size[1], img.size[0], 4))
 input_image = input_image[:, :, 1]
@@ -230,7 +232,7 @@ image.imsave(os.path.join(PATH_TO_DIGIT_CAPS, '{}.png'.format(0)), digit_caps_im
 ################################################################################
 
 y_proba_argmax = np.argmax(y_proba, axis=2)
-y_pred = np.squeeze(y_proba_argmax, axis=[1,2])
+y_pred = np.squeeze(y_proba_argmax, axis=(1,2))
 
 print('Prediction: {}'.format(y_pred))
 
