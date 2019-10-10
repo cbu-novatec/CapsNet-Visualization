@@ -19,8 +19,8 @@ class Tabs extends Component {
       { name: 'Input' },
       { name: 'Conv1 Kernel' },
       { name: 'Conv1 + ReLU' },
-      { name: 'Primary Caps' },
-      { name: 'Digit Caps' },
+      { name: 'CapsLayer1' },
+      { name: 'CapsLayer2' },
       { name: 'Reconstruction' }
     ]
     return (
