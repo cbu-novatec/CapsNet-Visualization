@@ -1,6 +1,6 @@
 # CapsNet-Visualization
 
-![](readme/4.gif)
+![](readme/CapsNet_Visualization.gif)
 
 
 ## Setup
